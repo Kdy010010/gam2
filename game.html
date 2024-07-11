@@ -65,7 +65,7 @@
                     y: 0,
                     radius: size / 2,
                     color: 'red',
-                    speed: 2 + Math.random() * 3,
+                    speed: 5 + Math.random() * 5, // 속도 증가
                     type: 'circle'
                 };
             } else if (type < 0.66) {
@@ -75,7 +75,7 @@
                     y: 0,
                     size: size,
                     color: 'red',
-                    speed: 2 + Math.random() * 3,
+                    speed: 5 + Math.random() * 5, // 속도 증가
                     type: 'square'
                 };
             } else {
@@ -83,10 +83,10 @@
                 enemy = {
                     x: Math.random() * canvas.width,
                     y: 0,
-                    width: size,
+                    width: size * 2, // 길이 증가
                     height: 5,
                     color: 'red',
-                    speed: 2 + Math.random() * 3,
+                    speed: 5 + Math.random() * 5, // 속도 증가
                     type: 'line'
                 };
             }
