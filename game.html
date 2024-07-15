@@ -49,7 +49,7 @@
 
         let health = 100;
         let time = 0;
-        const gameDuration = 30; // 게임 클리어 시간 (초)
+        const gameDuration = 60; // 게임 클리어 시간 (초)
 
         const enemies = [];
 
@@ -65,7 +65,7 @@
                     y: 0,
                     radius: size / 2,
                     color: 'red',
-                    speed: 5 + Math.random() * 5, // 속도 증가
+                    speed: 10 + Math.random() * 10, // 속도 증가
                     type: 'circle'
                 };
             } else if (type < 0.66) {
@@ -75,7 +75,7 @@
                     y: 0,
                     size: size,
                     color: 'red',
-                    speed: 5 + Math.random() * 5, // 속도 증가
+                    speed: 16 + Math.random() * 5, // 속도 증가
                     type: 'square'
                 };
             } else {
@@ -83,7 +83,7 @@
                 enemy = {
                     x: Math.random() * canvas.width,
                     y: 0,
-                    width: size * 2, // 길이 증가
+                    width: size * 4, // 길이 증가
                     height: 5,
                     color: 'red',
                     speed: 5 + Math.random() * 5, // 속도 증가
