@@ -73,9 +73,9 @@
                 enemy = {
                     x: Math.random() * canvas.width,
                     y: 0,
-                    size: size,
+                    size: size*3,
                     color: 'red',
-                    speed: 16 + Math.random() * 5, // 속도 증가
+                    speed: 16 + Math.random() * 10, // 속도 증가
                     type: 'square'
                 };
             } else {
@@ -83,7 +83,7 @@
                 enemy = {
                     x: Math.random() * canvas.width,
                     y: 0,
-                    width: size * 4, // 길이 증가
+                    width: size * 6, // 길이 증가
                     height: 5,
                     color: 'red',
                     speed: 5 + Math.random() * 5, // 속도 증가
