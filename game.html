@@ -151,7 +151,7 @@
                 if (enemy.type === 'circle') {
                     const dist = Math.hypot(circle.x - enemy.x, circle.y - enemy.y);
                     if (dist - circle.radius - enemy.radius < 1) {
-                        health -= 10;
+                        health -= 50;
                         enemies.splice(index, 1);
                     }
                 } else if (enemy.type === 'square') {
@@ -159,7 +159,7 @@
                         circle.x + circle.radius > enemy.x &&
                         circle.y < enemy.y + enemy.size &&
                         circle.y + circle.radius > enemy.y) {
-                        health -= 10;
+                        health -= 60;
                         enemies.splice(index, 1);
                     }
                 } else if (enemy.type === 'line') {
@@ -167,7 +167,7 @@
                         circle.x + circle.radius > enemy.x &&
                         circle.y < enemy.y + enemy.height &&
                         circle.y + circle.radius > enemy.y) {
-                        health -= 10;
+                        health -= 70;
                         enemies.splice(index, 1);
                     }
                 }
@@ -177,6 +177,7 @@
         function gameLoop() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             drawCircle(circle);
+            drawEnemies();
             drawEnemies();
             detectCollision();
 
